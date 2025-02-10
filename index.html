@@ -9,11 +9,15 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
         integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
+    
     <link rel="stylesheet" href="style.css">
     <title>Gmail</title>
 </head>
 
 <body>
+
+    <!-- ..............navbar............... -->
+
     <div class="navbar">
         <div class="navbar-container-1st">
             <i class="fa-solid fa-bars navbar-toggle"></i>
@@ -31,6 +35,42 @@
             <i class="fa-solid fa-user"></i>
         </div>
     </div>
+
+    <!-- ............. main .................... -->
+
+    <div class="main">
+        <div class="side-bar">
+            <div class="compose">
+                <i class="fa-solid fa-pen"></i>
+            </div>
+            <div class="side-bar-menu">
+                <div><i class="fa-solid fa-inbox"></i> inbox</div>
+                <div><i class="fa-regular fa-star"></i> starred</div>
+                <div><i class="fa-regular fa-clock"></i> snoozed</div>
+                <div><i class="fa-solid fa-paper-plane"></i> sent</div>
+                <div><i class="fa-regular fa-file"></i> drafts</div>
+                <div>
+                    <label for="more-menu-toggle"><i class="fa-solid fa-chevron-down"></i> more</label>
+                    <!-- <label for="more-menu-toggle"><i class="fa-solid fa-chevron-up"></i> less</label> -->
+                </div>
+            </div>
+            <input type="checkbox" name="more-menu-toggle" id="more-menu-toggle">
+            <div class="more-menu">
+                <div><i class="fa-solid fa-tag"></i> important</div>
+                <div><i class="fa-solid fa-message"></i> chats</div>
+                <div><i class="fa-solid fa-paper-plane"></i> scheduled</div>
+                <div><i class="fa-regular fa-envelope"></i> all mail</div>
+                <div><i class="fa-solid fa-circle-exclamation"></i> spam</div>
+                <div><i class="fa-solid fa-trash"></i> bin</div>
+                <div><i class="fa-solid fa-trash"></i> categories</div>
+                .categories
+
+            </div>
+            
+        </div>
+        <div class="main-body"></div>
+    </div>
+
 </body>
 
 </html>

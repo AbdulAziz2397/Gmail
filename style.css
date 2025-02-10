@@ -18,7 +18,6 @@ body{
     align-items: center;
     width: 100%;
     height: 10vh;
-    background: rgb(214, 214, 214);
 }
 
 /* .. Logo Container.. */
@@ -39,7 +38,7 @@ body{
 /* .. searchbar Container.. */
 
 .navbar-container-2nd{
-    width: 60%;
+    width: 50%;
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -81,3 +80,10 @@ body{
     background: #dde2eb;    
 }
 
+/* ... ......... sidebar .......... ... */
+
+
+
+#more-menu-toggle{
+    display: none;
+}
