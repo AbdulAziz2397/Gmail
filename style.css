@@ -119,6 +119,7 @@ body {
     gap: 10px;
     scrollbar-width: none;
     overflow-x: auto;
+
 }
 
 /* ... compose btn ... */
@@ -140,7 +141,7 @@ body {
     background: #c2e7ff;
     padding: 18px 0px;
     font-size: 16px;
-    border-radius: 10px;
+    border-radius: 15px;
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
@@ -158,6 +159,8 @@ body {
     display: flex;
     flex-direction: column;
     scrollbar-width: none;
+    overflow: scroll;
+    overflow-x: auto;
 }
 .menu-item{
     display: flex;
