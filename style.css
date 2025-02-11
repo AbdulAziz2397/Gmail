@@ -8,6 +8,8 @@
 
 body {
     background: #f8fafd;
+    height: 100vh;
+    overflow: hidden;
 }
 
 .fa-solid,
@@ -156,11 +158,12 @@ body {
 /* ... menu .. */
 
 .side-bar-menu {
+    height: 78vh;
     display: flex;
     flex-direction: column;
     scrollbar-width: none;
-    overflow: scroll;
-    overflow-x: auto;
+    overflow: auto;
+    padding-bottom: 30px;
 }
 .menu-item{
     display: flex;
