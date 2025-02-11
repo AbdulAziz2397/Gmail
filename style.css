@@ -1,35 +1,45 @@
-*{
+* {
     padding: 0%;
     margin: 0%;
     box-sizing: border-box;
+    font-family: "Roboto", serif;
+    /* border: 1px solid red; */
 }
-body{
+
+body {
     background: #f8fafd;
 }
-.fa-solid, .fa-regular, .material-symbols-outlined{
+
+.fa-solid,
+.fa-regular,
+.material-symbols-outlined,
+.navbar-logo {
     cursor: pointer;
 }
+
 /* .......... navbar .......... */
 
-.navbar{
+.navbar {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
     width: 100%;
     height: 10vh;
+    position: relative;
 }
 
 /* .. Logo Container.. */
 
-.navbar-container-1st{
+.navbar-container-1st {
     display: flex;
     flex-direction: row;
     align-items: center;
     gap: 10px;
     padding: 0px 20px;
 }
-.navbar-toggle{
+
+.navbar-toggle {
     font-size: 20px;
     padding: 10px;
     border-radius: 50px;
@@ -37,7 +47,7 @@ body{
 
 /* .. searchbar Container.. */
 
-.navbar-container-2nd{
+.navbar-container-2nd {
     width: 50%;
     display: flex;
     flex-direction: row;
@@ -47,43 +57,145 @@ body{
     padding: 5px 8px;
     border-radius: 50px;
 }
-.search-bar{
+
+.search-bar {
     width: 100%;
     border: 0px;
     background: transparent;
     outline: none;
     font-size: 18px;
 }
-.fa-sliders, .fa-magnifying-glass{
+
+.fa-sliders,
+.fa-magnifying-glass {
     padding: 10px;
     border-radius: 50px;
 }
-.navbar-toggle:hover, .fa-sliders:hover, .fa-magnifying-glass:hover{
-    background: #dde2eb;    
+
+.navbar-toggle:hover,
+.fa-sliders:hover,
+.fa-magnifying-glass:hover {
+    background: #dde2eb;
 }
 
 /* .. actions container .. */
 
-.navbar-container-3rd{
+.navbar-container-3rd {
     display: flex;
     flex-direction: row;
     align-items: center;
     gap: 5px;
     padding: 0px 20px;
 }
-.fa-gear, .fa-circle-question, .fa-user, .material-symbols-outlined{
+
+.nav-fa-gear,
+.fa-circle-question,
+.fa-user,
+.material-symbols-outlined {
     padding: 10px;
     border-radius: 50px;
     font-size: 20px;
 }
-.fa-gear:hover, .fa-circle-question:hover, .fa-user:hover, .material-symbols-outlined:hover{
-    background: #dde2eb;    
+
+.fa-gear:hover,
+.fa-circle-question:hover,
+.fa-user:hover,
+.material-symbols-outlined:hover {
+    background: #dde2eb;
 }
 
 /* ... ......... sidebar .......... ... */
 
+.side-bar {
+    width: 232px;
+    height: 90vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: 10px;
+}
+
+/* ... compose btn ... */
 
 
-#more-menu-toggle{
+.compose {
+    width: 250px;
+    height: 12vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    align-items: center;
+    padding: 10px;
+    z-index: 100;
+}
+
+.compose-btn {
+    width: 140px;
+    background: #c2e7ff;
+    padding: 18px 0px;
+    font-size: 16px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    text-transform: capitalize;
+}
+.compose-btn:hover{
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.247);
+    transition: all 0.1s;
+}
+
+/* ... menu .. */
+
+.side-bar-menu {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.menu-item{
+    display: flex;
+    cursor: pointer;
+    border-radius: 0px 50px 50px 0px;
+    height: 32px;
+    align-items: center;
+    gap: 20px;
+    padding-left: 30px;
+    text-transform: capitalize;
+    font-size: 14px;
+}
+.menu-item:hover{
+    background: #dde2eb;
+}
+.menu-item:active{
+    background: #dde2eb;
+}
+
+/* ........ more menu ........ */
+
+
+
+
+
+.more-menu {
+    display: none;
+}
+
+#more-menu-toggle:checked~div.more-menu {
+    display: block;
+}
+
+/* .. categories .. */
+
+.categories {
+    display: none;
+}
+
+#categories:checked~div.categories {
+    display: block;
+}
+
+#more-menu-toggle,
+#categories {
     display: none;
 }
