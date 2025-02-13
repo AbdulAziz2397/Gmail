@@ -19,79 +19,78 @@
 <body>
 
     <!-- ..............navbar............... -->
+    <div class="nav-p">
+        <div class="navbar">
+            <div class="navbar-container-1st">
+                <label for="side-bar-toggle"><i class="fa-solid fa-bars navbar-toggle"></i></label>
+                <img class="navbar-logo full-logo" src="./assets/images/gmail-logo.png" alt="">
+                <img class="navbar-logo half-logo" src="./assets/images/gmail-logo-responsive.png" alt="">
 
-    <div class="navbar">
-        <div class="navbar-container-1st">
-            <i class="fa-solid fa-bars navbar-toggle"></i>
-            <img class="navbar-logo full-logo" src="./assets/images/gmail-logo.png" alt="">
-            <img class="navbar-logo half-logo" src="./assets/images/gmail-logo-responsive.png" alt="">
-
-        </div>
-        <div class="navbar-container-2nd">
-            <i class="fa-solid fa-magnifying-glass"></i>
-            <input class="search-bar" type="search" name="search" placeholder="Search mail" id="">
-            <i class="fa-solid fa-sliders"></i>
-        </div>
-        <div class="navbar-container-3rd">
-            <i class="fa-regular fa-circle-question"></i>
-            <i class="fa-solid fa-gear nav-fa-gear"></i>
-            <span class="material-icons material-symbols-outlined">apps</span>
-            <i class="fas fa-user"></i>
+            </div>
+            <div class="navbar-container-2nd">
+                <i class="fa-solid fa-magnifying-glass"></i>
+                <input class="search-bar" type="search" name="search" placeholder="Search mail" id="">
+                <i class="fa-solid fa-sliders"></i>
+            </div>
+            <div class="navbar-container-3rd">
+                <i class="fa-regular fa-circle-question"></i>
+                <i class="fa-solid fa-gear nav-fa-gear"></i>
+                <span class="material-icons material-symbols-outlined">apps</span>
+                <i class="fas fa-user"></i>
+            </div>
         </div>
     </div>
-
     <!-- ............. main .................... -->
 
     <div class="main">
+        <input type="checkbox" name="side-bar-toggle" id="side-bar-toggle">
         <div class="side-bar">
             <div class="compose">
-                <div class="compose-btn"><i class="fa-solid fa-pen"></i>compose</div>
+                <div class="compose-btn"><i class="fa-solid fa-pen"></i><span class="menu-text">compose</span></div>
             </div>
             <div class="side-bar-menu">
                 <div class="child-side-bar-menu">
-                    <div class="menu-item"><i class="fa-solid fa-inbox"></i> inbox</div>
-                    <div class="menu-item"><i class="fa-regular fa-star"></i> starred</div>
-                    <div class="menu-item"><i class="fa-regular fa-clock"></i> snoozed</div>
-                    <div class="menu-item"><i class="fa-solid fa-paper-plane"></i> sent</div>
-                    <div class="menu-item"><i class="fa-regular fa-file"></i> drafts</div>
-                    <label for="more-menu-toggle">
-                        <div class="menu-item highlight-btn"><i class="fa-solid fa-chevron-down"></i> more</div>
+                    <div class="menu-item"><i class="fa-solid fa-inbox"></i><span class="menu-text">inbox</span></div>
+                    <div class="menu-item"><i class="fa-regular fa-star"></i><span class="menu-text">starred</span></div>
+                    <div class="menu-item"><i class="fa-regular fa-clock"></i><span class="menu-text">snoozed</span></div>
+                    <div class="menu-item"><i class="fa-solid fa-paper-plane"></i><span class="menu-text">sent</span></div>
+                    <div class="menu-item"><i class="fa-regular fa-file"></i><span class="menu-text">drafts</span></div>
+                    <label for="more-menu-toggle" class="more-menu-toggle-label">
+                        <div class="menu-item highlight-btn"><i class="fa-solid fa-chevron-down"></i><span class="menu-text">more</span></div>
                     </label>
                     <input type="checkbox" name="more-menu-toggle" id="more-menu-toggle">
                     <div class="more-menu">
-                        <div class="menu-item"><i class="fa-solid fa-tag"></i> important</div>
-                        <div class="menu-item"><i class="fa-solid fa-message"></i> chats</div>
-                        <div class="menu-item"><i class="fa-solid fa-paper-plane"></i> scheduled</div>
-                        <div class="menu-item"><i class="fa-regular fa-envelope"></i> all mail</div>
-                        <div class="menu-item"><i class="fa-solid fa-circle-exclamation"></i> spam</div>
-                        <div class="menu-item"><i class="fa-solid fa-trash"></i> bin</div>
-                        <label for="categories">
-                            <div class="menu-item highlight-btn"><i class="fa-solid fa-tag"></i> categories</div>
+                        <div class="menu-item"><i class="fa-solid fa-tag"></i><span class="menu-text">important</span></div>
+                        <div class="menu-item"><i class="fa-solid fa-message"></i><span class="menu-text">chats</span></div>
+                        <div class="menu-item"><i class="fa-solid fa-paper-plane"></i><span class="menu-text">scheduled</span></div>
+                        <div class="menu-item"><i class="fa-regular fa-envelope"></i><span class="menu-text">all mail</span></div>
+                        <div class="menu-item"><i class="fa-solid fa-circle-exclamation"></i><span class="menu-text">spam</span></div>
+                        <div class="menu-item"><i class="fa-solid fa-trash"></i><span class="menu-text">bin</span></div>
+                        <label for="categories" class="categories-label">
+                            <div class="menu-item highlight-btn"><i class="fa-solid fa-tag"></i><span class="menu-text">categories</span></div>
                         </label>
                         <input type="checkbox" name="categories" id="categories">
                         <div class="categories">
-                            <div class="menu-item"><i class="fa-solid fa-user-group"></i> social</div>
-                            <div class="menu-item"><i class="fa-solid fa-circle-exclamation"></i> updates</div>
-                            <div class="menu-item"><i class="fa-solid fa-comments"></i> forums</div>
-                            <div class="menu-item"><i class="fa-solid fa-tag"></i> promotions</div>
+                            <div class="menu-item"><i class="fa-solid fa-user-group"></i><span class="menu-text">social</span></div>
+                            <div class="menu-item"><i class="fa-solid fa-circle-exclamation"></i><span class="menu-text">updates</span></div>
+                            <div class="menu-item"><i class="fa-solid fa-comments"></i><span class="menu-text">forums</span></div>
+                            <div class="menu-item"><i class="fa-solid fa-tag"></i><span class="menu-text">promotions</span></div>
                         </div>
 
-                        <div class="menu-item"><i class="fa-solid fa-gear"></i> manage labels</div>
-                        <div class="menu-item"><i class="fa-solid fa-plus"></i> create new label</div>
+                        <div class="menu-item"><i class="fa-solid fa-gear"></i><span class="menu-text">manage labels</span></div>
+                        <div class="menu-item"><i class="fa-solid fa-plus"></i><span class="menu-text">create new label</span></div>
                     </div>
                 </div>
             </div>
-
-
-
         </div>
+
+
+
+
 
 
 
         <div class="main-body">
-
-
-
         </div>
 
 
@@ -105,7 +104,7 @@
                 <img src="./assets/images/tasks-logo.svg" alt="" class="app">
                 <img src="./assets/images/contacts-logo.png" alt="" class="app">
                 <hr>
-                <i class="fa-solid fa-plus left-plus-btn" ></i>
+                <i class="fa-solid fa-plus left-plus-btn"></i>
             </div>
 
         </div>
