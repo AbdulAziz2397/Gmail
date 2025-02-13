@@ -8,6 +8,7 @@
 
 body {
     background: #f8fafd;
+    /* background: black; */
     height: 100vh;
     overflow: hidden;
 }
@@ -15,10 +16,25 @@ body {
 .fa-solid,
 .fa-regular,
 .material-symbols-outlined,
-.navbar-logo {
+.navbar-logo,
+.app {
     cursor: pointer;
 }
 
+.navbar-toggle:hover,
+.fa-sliders:hover,
+.fa-magnifying-glass:hover,
+.fa-gear:hover,
+.fa-circle-question:hover,
+.fa-user:hover,
+.material-symbols-outlined:hover,
+.menu-item:hover,
+.highlight-btn,
+.app:hover,
+.left-plus-btn:hover
+{
+    background: #dde2ebe5;
+}
 /* .......... navbar .......... */
 
 .navbar {
@@ -48,6 +64,9 @@ body {
     padding: 10px;
     border-radius: 50px;
 }
+.half-logo{
+    display: none;
+}
 
 /* .. searchbar Container.. */
 
@@ -72,16 +91,12 @@ body {
 }
 
 .fa-sliders,
-.fa-magnifying-glass {
+.fa-magnifying-glass
+{
     padding: 10px;
     border-radius: 50px;
 }
 
-.navbar-toggle:hover,
-.fa-sliders:hover,
-.fa-magnifying-glass:hover {
-    background: #dde2eb75;
-}
 
 /* .. actions container .. */
 
@@ -91,7 +106,6 @@ body {
     align-items: center;
     gap: 5px;
     padding: 0px 20px;
-    float: right;
     margin-left: auto;
 }
 
@@ -104,11 +118,10 @@ body {
     font-size: 20px;
 }
 
-.fa-gear:hover,
-.fa-circle-question:hover,
-.fa-user:hover,
-.material-symbols-outlined:hover {
-    background: #dde2eb75;
+/* .......................... main ............................ */
+.main{
+    display: flex;
+    flex-direction: row;
 }
 
 /* ... ......... sidebar .......... ... */
@@ -177,19 +190,10 @@ body {
     text-transform: capitalize;
     font-size: 14px;
 }
-.menu-item:hover{
-    background: #dde2eb75;
-}
-.menu-item:active{
-    background: #dde2eb75;
-}
 
 /* ........ more menu ........ */
 
 
-.more-btn{
-background: #dde2eb75;
-}
 .more-menu {
     display: none;
 }
@@ -211,4 +215,84 @@ background: #dde2eb75;
 #more-menu-toggle,
 #categories {
     display: none;
+}
+
+
+/* .................... left-side bar .................... */
+
+.left-side-bar{
+    margin-left: auto;
+    width: 60px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+.apps{
+    padding-top: 25px;
+    display: flex;
+    flex-direction: column;
+    row-gap: 28px;
+    /* align-items: center; */
+}
+.apps>hr{
+    opacity: 0.5;
+}
+.app{
+    width: 40px;
+    padding: 8px;
+    border-radius: 50px;
+}
+
+.left-plus-btn{
+    font-size: 14px;
+    padding: 13px;
+    border-radius: 50px;
+    text-align: center;
+}
+
+/* ............................. main body .......................... */
+
+.main-body{
+    background: white;
+    width: 100%;
+}
+
+
+
+/* .............. responsing ................. */
+
+@media screen and (max-width: 768px) {
+    .navbar{
+        justify-content: space-between;
+        padding: 0px 25px;
+    }
+    .navbar-container-1st{
+        padding: 0px;
+        margin-right: 20px;
+        width: auto;
+        max-width: 200px;
+    }
+    .navbar-container-2nd{
+        width: 100%;
+        max-width: 500px;
+    }
+    .navbar-container-3rd{
+        display: none;
+        padding: 0px;
+    }
+    .full-logo{
+        display: none;
+    }
+    .half-logo{
+        display: flex;
+    }
+
+    .side-bar{
+        width: 55px;
+        overflow: hidden;
+    }
+    .menu-item{
+        padding-left: 18px;
+    }
+    
 }
