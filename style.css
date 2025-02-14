@@ -137,8 +137,6 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: start;
-    scrollbar-width: none;
-    overflow-x: auto;
 }
 
 
@@ -220,9 +218,19 @@ body {
 .side-bar-menu {
     display: flex;
     flex-direction: column;
-    scrollbar-width: none;
     overflow: auto;
     padding-bottom: 30px;
+    height: 100%;
+}
+.side-bar-menu::-webkit-scrollbar{
+    width: 5px;
+}
+.side-bar-menu::-webkit-scrollbar-track{
+    background: none;
+}
+.side-bar-menu::-webkit-scrollbar-thumb{
+    background: rgba(0, 0, 0, 0.288);
+    border-radius: 60px;
 }
 
 .menu-item {
@@ -240,7 +248,7 @@ body {
 #side-bar-toggle:checked~div.side-bar>div.side-bar-menu>div.child-side-bar-menu {
     display: flex;
     flex-direction: column;
-    align-items: center;
+    height: auto;
 }
 
 /* ........ more menu ........ */
@@ -386,13 +394,14 @@ body {
 
     /* ........ navbar ........ */
     .nav-p {
-        padding: 10px 20px;
+        padding: 15px 20px;
+        height: 12vh;
     }
 
     .navbar {
         justify-content: space-between;
         border-radius: 50px;
-        height: 8vh;
+        height: 100%;
         background: #e9eef6;
         box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.247);
         position: relative;
@@ -484,7 +493,7 @@ body {
     }
 
     .main {
-        height: 90vh;
+        height: 88vh;
     }
 
     .left-side-bar {
@@ -512,6 +521,12 @@ body {
     #side-bar-toggle:checked~div.side-bar>div.side-bar-menu>div.child-side-bar-menu>div.more-menu>label.categories-label,
     #side-bar-toggle:checked~div.side-bar>div.side-bar-menu>div.child-side-bar-menu>div.more-menu>div.categories {
         width: 100%;
+        height: auto;
+    }
+    #side-bar-toggle:checked~div.side-bar>div.side-bar-menu,
+    .side-bar-menu{
+        height: 100%;
+        overflow: auto;
     }
 
     #side-bar-toggle:checked~div.side-bar>div.side-bar-menu>div.child-side-bar-menu {
@@ -599,10 +614,21 @@ body {
 .mails{
     width: 100%;
     height: auto;
-    padding-bottom: 50px;
+    padding-bottom: 20px;
     overflow-y: scroll;
     overflow-x: auto;
     border-radius:0px 0px 15px 15px;
+    scrollbar-width: initial;
+}
+.mails::-webkit-scrollbar{
+    width: 5px;
+}
+.mails::-webkit-scrollbar-track{
+    background: none;
+}
+.mails::-webkit-scrollbar-thumb{
+    background: rgba(0, 0, 0, 0.288);
+    border-radius: 60px;
 }
 
 .mail {
@@ -661,8 +687,10 @@ body {
     overflow: hidden;
     text-overflow: ellipsis;
     width: 100%;
-    height: 20px;
-    font-size: 16px;
+    height: 16px;
+    font-size: 15px;
+    font-weight: 300;
+    color: rgb(107, 107, 107);
 }
 
 .mail-container-3rd {
@@ -706,7 +734,6 @@ body {
 }
 
 .mail-div {
-
     border-bottom: 1px solid rgba(0, 0, 0, 0.089);
 }
 
@@ -732,6 +759,7 @@ body {
     width: 100%;
     gap: 20px;
     cursor: pointer;
+    border-bottom: 2px solid white;
 }
 .primary-box:hover{
     background: #e9eef6;
@@ -739,7 +767,6 @@ body {
     border-bottom: 2px solid blueviolet;
 }
 .box1{
-    border-bottom: 2px solid blueviolet;
     color: blueviolet;
-
+    border-bottom: 2px solid blueviolet;
 }
