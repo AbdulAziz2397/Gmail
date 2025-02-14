@@ -32,8 +32,7 @@ body {
 .highlight-btn,
 .app:hover,
 .left-plus-btn:hover,
-.filter-checkbox:hover
-{
+.filter-checkbox:hover {
     background: #dde2ebe5;
 }
 
@@ -117,8 +116,7 @@ body {
 .fa-circle-question,
 .fa-user,
 .material-symbols-outlined,
-.navbar-toggle
-{
+.navbar-toggle {
     padding: 10px;
     border-radius: 50px;
     font-size: 20px;
@@ -129,7 +127,8 @@ body {
     width: 100%;
     display: flex;
     flex-direction: row;
-    align-items: start;
+    padding-bottom: 50px;
+    height: 100vh;
 }
 
 /* ... ......... sidebar .......... ... */
@@ -137,7 +136,7 @@ body {
 .side-bar {
     max-width: 230px;
     width: 100%;
-    height: 100vh;
+    height: 100%;
     display: flex;
     flex-direction: column;
     justify-content: start;
@@ -303,26 +302,26 @@ body {
     width: 100%;
     display: flex;
     flex-direction: column;
-    overflow-y: scroll;
-    overflow-x: auto;
     border-radius: 15px 15px 0px 0px;
     background: white;
+    padding-bottom: 100px;
 }
 
 /* ........... main-body-function .............. */
-.main-body-function{
+.main-body-function {
     width: 100%;
+    height: 50px;
     background: white;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    height: 50px;
-    position: sticky;
     top: 0%;
     z-index: 100;
     box-shadow: 0px 0px 2px 0px rgba(0, 0, 0, 0.247);
+    border-radius: 15px 15px 0px 0px ;
 }
-.function-one{
+
+.function-one {
     width: 160px;
     display: flex;
     flex-direction: row;
@@ -330,15 +329,25 @@ body {
     padding: 10px 0px;
     align-items: center;
 }
-.filter>select{
+
+.filter>select {
     border: 0px;
     outline: 0px;
     width: 20px;
 }
-.filter-checkbox{
+
+.filter {
+    width: 50px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.filter-checkbox {
     padding: 0px;
 }
-.function-two{
+
+.function-two {
     width: 200px;
     display: flex;
     flex-direction: row;
@@ -351,8 +360,7 @@ body {
 .fa-ellipsis-vertical,
 .fa-less-than,
 .fa-greater-than,
-.sitara
-{
+.sitara {
     width: 32px;
     height: 32px;
     display: flex;
@@ -361,19 +369,23 @@ body {
     font-size: 16px;
     border-radius: 50px;
 }
+
 .fa-rotate-right:hover,
 .fa-ellipsis-vertical:hover,
 .fa-less-than:hover,
 .fa-greater-than:hover,
-.sitara:hover
-{
+.sitara:hover {
     background: #c2e7ffb6;
 }
+
+/* ................. main body nav ................. */
+
+
 
 /* .............. responsiving ................. */
 
 @media screen and (max-width: 767px) {
-    
+
 
 
     /* ........ navbar ........ */
@@ -389,7 +401,7 @@ body {
         box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.247);
         position: relative;
     }
-    
+
     .navbar-container-1st {
         padding: 0px 0px 0px 8px;
         margin-right: 20px;
@@ -416,6 +428,7 @@ body {
         padding: 10px;
         max-width: 232px;
     }
+
     .compose {
         width: auto;
         position: fixed;
@@ -424,7 +437,7 @@ body {
         z-index: 100;
         margin-left: auto;
     }
-    
+
     #side-bar-toggle:checked~div.side-bar>div.compose>div.compose-btn>span.menu-text,
     #side-bar-toggle:checked~div.side-bar>div.side-bar-menu>div.child-side-bar-menu>label.more-menu-toggle-label>div.menu-item>span.menu-text,
     #side-bar-toggle:checked~div.side-bar>div.side-bar-menu>div.child-side-bar-menu>div.menu-item>span.menu-text,
@@ -451,13 +464,16 @@ body {
         padding-left: 30px;
         text-transform: capitalize;
     }
-    .menu-item{
+
+    .menu-item {
         width: 100%;
     }
-    #side-bar-toggle:checked~div.side-bar>div.compose{
+
+    #side-bar-toggle:checked~div.side-bar>div.compose {
         display: none;
     }
-    .side-bar{
+
+    .side-bar {
         height: 100vh;
         width: 300px;
         max-width: 300px;
@@ -471,14 +487,17 @@ body {
         z-index: 110;
         background: #f8fafd;
     }
-    .main{
+
+    .main {
         height: 100vh;
     }
-    .left-side-bar{
+
+    .left-side-bar {
         display: none;
     }
+
     #side-bar-toggle:checked~div.side-bar {
-        align-items:flex-start;
+        align-items: flex-start;
         width: 300px;
         display: flex;
         flex-direction: column;
@@ -490,22 +509,23 @@ body {
         max-width: 300px;
         left: 0;
     }
+
     #side-bar-toggle:checked~div.side-bar>div.side-bar-menu,
     #side-bar-toggle:checked~div.side-bar>div.side-bar-menu>div.child-side-bar-menu,
     #side-bar-toggle:checked~div.side-bar>div.side-bar-menu>div.child-side-bar-menu>label.more-menu-toggle-label,
     #side-bar-toggle:checked~div.side-bar>div.side-bar-menu>div.child-side-bar-menu>div.more-menu,
     #side-bar-toggle:checked~div.side-bar>div.side-bar-menu>div.child-side-bar-menu>div.more-menu>label.categories-label,
-    #side-bar-toggle:checked~div.side-bar>div.side-bar-menu>div.child-side-bar-menu>div.more-menu>div.categories
-    {
+    #side-bar-toggle:checked~div.side-bar>div.side-bar-menu>div.child-side-bar-menu>div.more-menu>div.categories {
         width: 100%;
     }
+
     #side-bar-toggle:checked~div.side-bar>div.side-bar-menu>div.child-side-bar-menu {
         display: flex;
         flex-direction: column;
         align-items: start;
         width: 100%;
     }
-    
+
     .fa-circle-question,
     .nav-fa-gear,
     .material-symbols-outlined,
@@ -514,71 +534,95 @@ body {
     .fa-sliders {
         display: none;
     }
-    
-    .mail-container-3rd:hover{
+
+    .mail-container-3rd:hover {
         display: none;
         visibility: hidden;
         width: 0%;
     }
+
     .three-dots,
     .mail-icon,
-    .sitara
-    {
+    .sitara {
         display: none;
     }
-    .sitara{
+
+    .sitara {
         display: none;
     }
-    .mail-div> div.mail-container-3rd{
+
+    .mail-div>div.mail-container-3rd {
         visibility: hidden;
         display: none;
     }
-    .mail-container-2nd{
+
+    .mail-container-2nd {
         width: 100%;
     }
-    .mail-container-3rd{
+
+    .mail-container-3rd {
         display: none;
     }
-    
+
     .mail-div {
         justify-content: space-between;
         border-radius: 0px;
         height: 8vh;
     }
+    .primary-box{
+        padding-right: 100px;
+    }
 }
+
 @media screen and (max-width: 374px) {
-    .side-bar{
+    .side-bar {
         max-width: 100%;
         width: 100%;
         left: -100%;
     }
-    #side-bar-toggle:checked~div.side-bar{
+
+    #side-bar-toggle:checked~div.side-bar {
         max-width: 100%;
         width: 100%;
         left: 0%;
     }
-    .left-side-bar{
+
+    .left-side-bar {
         display: none;
     }
-    .main{
+
+    .main {
         margin-left: 0%;
     }
-}
-/* ............. mail ............... */
-
-.mail{
-        padding: 0px 0px;
-        width: 100%;
+    .navbar{
+        display: flex;
+        align-items: center;
     }
-    .mail-div {
+}
+
+/* ............. mail ............... */
+.mails{
+    width: 100%;
+    height: auto;
+    padding-bottom: 50px;
+    overflow-y: scroll;
+    overflow-x: auto;
+}
+
+.mail {
+    padding: 0px 0px;
+    width: 100%;
+}
+
+.mail-div {
     height: 40px;
     width: 100%;
     display: flex;
     flex-direction: row;
-    align-items: center;
     justify-content: center;
     position: relative;
 }
+
 .mail-container-1st {
     display: flex;
     flex-direction: row;
@@ -589,20 +633,25 @@ body {
     max-width: 232px;
     width: 100%;
 }
-.three-dots{
+
+.three-dots {
     visibility: hidden;
 }
-.mail-div:hover{
+
+.mail-div:hover {
     box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.247);
     transition: all 0.1s;
 }
-.mail-div:hover > div.mail-container-1st > i.three-dots {
+
+.mail-div:hover>div.mail-container-1st>i.three-dots {
     visibility: visible;
 }
-.mail-div:hover > div.mail-container-3rd{
+
+.mail-div:hover>div.mail-container-3rd {
     visibility: visible;
 }
-.mail-container-2nd{
+
+.mail-container-2nd {
     width: 60%;
     max-width: 700px;
     display: flex;
@@ -611,19 +660,21 @@ body {
     padding: 5px 8px;
 }
 
-.mail-container-2nd>p{
+.mail-container-2nd>p {
     overflow: hidden;
     width: 100%;
     height: 20px;
     font-size: 16px;
 }
+
 .mail-container-3rd {
     display: flex;
     gap: 5px;
     padding: 0px 8px 0px 20px;
     visibility: hidden;
 }
-.mail-icon{
+
+.mail-icon {
     width: 32px;
     height: 32px;
     display: flex;
@@ -637,17 +688,12 @@ body {
 
 
 
-.filter{
-    width: 50px;
-    height: 30px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-.mail-icon:hover{
+
+.mail-icon:hover {
     background-color: #c2e7ff;
 }
-.mail-number{
+
+.mail-number {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -656,13 +702,45 @@ body {
     border-radius: 5px;
     font-size: 12px;
 }
-.mail-number:hover{
+
+.mail-number:hover {
     background: #c2e7ff;
 }
-.mail-div{
+
+.mail-div {
 
     border-bottom: 1px solid rgba(0, 0, 0, 0.089);
 }
-    .mail-div:hover {
+
+.mail-div:hover {
     box-shadow: 0px 0px 2px 0px rgba(0, 0, 0, 0.39);
-    }
+}
+
+
+/* .............. body navbar ............. */
+
+.body-navbar{
+    display: flex;
+    height: 55px;
+    width: 100%;
+    overflow-x: auto;
+    justify-content: space-between;
+    scrollbar-width: none;
+}
+.primary-box{
+    display: flex;
+    align-items: center;
+    padding-left: 15px;
+    width: 100%;
+    gap: 20px;
+}
+.primary-box:hover{
+    background: #e9eef6;
+    color: blueviolet;
+    border-bottom: 2px solid blueviolet;
+}
+.box1{
+    border-bottom: 2px solid blueviolet;
+    color: blueviolet;
+
+}
