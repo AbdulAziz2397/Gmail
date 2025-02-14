@@ -50,7 +50,7 @@ body {
 /* .......... navbar .......... */
 
 .navbar {
-    height: 10vh;
+    height: 64px;
     width: 100%;
     display: flex;
     flex-direction: row;
@@ -76,7 +76,7 @@ body {
 /* .. searchbar Container.. */
 
 .navbar-container-2nd {
-    width: 60%;
+    width: 100%;
     max-width: 700px;
     display: flex;
     flex-direction: row;
@@ -126,6 +126,7 @@ body {
 
 /* .......................... main ............................ */
 .main {
+    width: 100%;
     display: flex;
     flex-direction: row;
 }
@@ -133,8 +134,8 @@ body {
 /* ... ......... sidebar .......... ... */
 
 .side-bar {
-    max-width: 232px;
-    width: 50%;
+    max-width: 230px;
+    width: 100%;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
@@ -188,8 +189,8 @@ body {
 
 
 .compose {
-    max-width: 232px;
-    height: 12vh;
+    width: 100%;
+    height: 72px;
     display: flex;
     flex-direction: row;
     justify-content: start;
@@ -219,7 +220,6 @@ body {
 /* ... menu .. */
 
 .side-bar-menu {
-    height: 78vh;
     display: flex;
     flex-direction: column;
     scrollbar-width: none;
@@ -275,7 +275,6 @@ body {
     display: flex;
     flex-direction: column;
     row-gap: 28px;
-    /* align-items: center; */
 }
 
 .apps>hr {
@@ -298,14 +297,14 @@ body {
 /* ............................. main body .......................... */
 
 .main-body {
-    background: white;
-    width: 100%;
-    border-radius: 15px 15px 0px 0px;
-    overflow-y: scroll;
-    overflow-x: auto;
     height: 100vh;
+    width: 100%;
     display: flex;
     flex-direction: column;
+    overflow-y: scroll;
+    overflow-x: auto;
+    border-radius: 15px 15px 0px 0px;
+    background: white;
 }
 
 /* ........... main-body-function .............. */
@@ -345,18 +344,6 @@ body {
     align-items: center;
     padding: 10px 0px;
 }
-.mail-number{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 15px 15px;
-    transition: all 0.5s;
-    border-radius: 5px;
-    font-size: 12px;
-}
-.mail-number:hover{
-    background: #c2e7ff;
-}
 
 .fa-rotate-right,
 .fa-ellipsis-vertical,
@@ -381,10 +368,10 @@ body {
     background: #c2e7ffb6;
 }
 
-/* .............. responsing ................. */
+/* .............. responsiving ................. */
 
 @media screen and (max-width: 767px) {
-
+    
 
 
     /* ........ navbar ........ */
@@ -398,15 +385,9 @@ body {
         height: 8vh;
         background: #e9eef6;
         box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.247);
+        position: relative;
     }
-    .mail-div {
-        justify-content: space-between;
-        border-radius: 50px;
-        height: 8vh;
-        background: #e9eef6;
-        box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.247);
-    }
-
+    
     .navbar-container-1st {
         padding: 0px 0px 0px 8px;
         margin-right: 20px;
@@ -434,12 +415,14 @@ body {
         max-width: 232px;
     }
     .compose {
+        width: auto;
         position: fixed;
         top: 80vh;
         right: 20px;
         z-index: 100;
+        margin-left: auto;
     }
-
+    
     #side-bar-toggle:checked~div.side-bar>div.compose>div.compose-btn>span.menu-text,
     #side-bar-toggle:checked~div.side-bar>div.side-bar-menu>div.child-side-bar-menu>label.more-menu-toggle-label>div.menu-item>span.menu-text,
     #side-bar-toggle:checked~div.side-bar>div.side-bar-menu>div.child-side-bar-menu>div.menu-item>span.menu-text,
@@ -473,17 +456,18 @@ body {
         display: none;
     }
     .side-bar{
-        position: fixed;
-        max-width: 300px;
+        height: 100vh;
         width: 300px;
+        max-width: 300px;
         display: flex;
         flex-direction: column;
-        justify-content: flex-start;
-        scrollbar-width: none;
+        justify-content: start;
+        position: absolute;
+        left: -300px;
         overflow-x: auto;
+        scrollbar-width: none;
         z-index: 110;
         background: #f8fafd;
-        left: -300px;
     }
     .main{
         height: 100vh;
@@ -519,7 +503,7 @@ body {
         align-items: start;
         width: 100%;
     }
-
+    
     .fa-circle-question,
     .nav-fa-gear,
     .material-symbols-outlined,
@@ -543,16 +527,23 @@ body {
     .sitara{
         display: none;
     }
-    .mail-div:hover > div.mail-container-3rd{
+    .mail-div> div.mail-container-3rd{
         visibility: hidden;
         display: none;
     }
     .mail-container-2nd{
         width: 100%;
     }
+    .mail-container-3rd{
+        display: none;
+    }
     
+    .mail-div {
+        justify-content: space-between;
+        border-radius: 0px;
+        height: 8vh;
+    }
 }
-
 @media screen and (max-width: 374px) {
     .side-bar{
         max-width: 100%;
@@ -575,8 +566,9 @@ body {
 
 .mail{
         padding: 0px 0px;
-}
-.mail-div {
+        width: 100%;
+    }
+    .mail-div {
     height: 40px;
     width: 100%;
     display: flex;
@@ -621,6 +613,7 @@ body {
     overflow: hidden;
     width: 100%;
     height: 20px;
+    font-size: 16px;
 }
 .mail-container-3rd {
     display: flex;
@@ -652,3 +645,22 @@ body {
 .mail-icon:hover{
     background-color: #c2e7ff;
 }
+.mail-number{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 15px 15px;
+    transition: all 0.5s;
+    border-radius: 5px;
+    font-size: 12px;
+}
+.mail-number:hover{
+    background: #c2e7ff;
+}
+.mail-div{
+
+    border-bottom: 1px solid rgba(0, 0, 0, 0.089);
+}
+    .mail-div:hover {
+    box-shadow: 0px 0px 2px 0px rgba(0, 0, 0, 0.39);
+    }
