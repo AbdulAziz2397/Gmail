@@ -3,14 +3,12 @@
     margin: 0%;
     box-sizing: border-box;
     font-family: "Roboto", serif;
-    /* border: 1px solid red; */
 }
 
 body {
     background: #f8fafd;
-    /* background: black; */
     height: 100vh;
-    overflow: hidden;
+    object-fit: cover;
 }
 
 .fa-solid,
@@ -49,7 +47,7 @@ body {
 /* .......... navbar .......... */
 
 .navbar {
-    height: 64px;
+    height: 10vh;
     width: 100%;
     display: flex;
     flex-direction: row;
@@ -127,8 +125,7 @@ body {
     width: 100%;
     display: flex;
     flex-direction: row;
-    padding-bottom: 50px;
-    height: 100vh;
+    height: 90vh;
 }
 
 /* ... ......... sidebar .......... ... */
@@ -298,13 +295,12 @@ body {
 /* ............................. main body .......................... */
 
 .main-body {
-    height: 100vh;
+    height: 100%;
     width: 100%;
     display: flex;
     flex-direction: column;
-    border-radius: 15px 15px 0px 0px;
+    border-radius: 15px;
     background: white;
-    padding-bottom: 100px;
 }
 
 /* ........... main-body-function .............. */
@@ -415,7 +411,6 @@ body {
         max-width: 100%;
         display: flex;
         flex-direction: row;
-        /* position: fixed; */
         padding: 0 10px;
     }
 
@@ -474,7 +469,7 @@ body {
     }
 
     .side-bar {
-        height: 100vh;
+        height: 100%;
         width: 300px;
         max-width: 300px;
         display: flex;
@@ -489,7 +484,7 @@ body {
     }
 
     .main {
-        height: 100vh;
+        height: 90vh;
     }
 
     .left-side-bar {
@@ -567,7 +562,7 @@ body {
     .mail-div {
         justify-content: space-between;
         border-radius: 0px;
-        height: 8vh;
+        height: 60px;
     }
     .primary-box{
         padding-right: 100px;
@@ -607,6 +602,7 @@ body {
     padding-bottom: 50px;
     overflow-y: scroll;
     overflow-x: auto;
+    border-radius:0px 0px 15px 15px;
 }
 
 .mail {
@@ -621,6 +617,7 @@ body {
     flex-direction: row;
     justify-content: center;
     position: relative;
+    align-items: center;
 }
 
 .mail-container-1st {
@@ -662,6 +659,7 @@ body {
 
 .mail-container-2nd>p {
     overflow: hidden;
+    text-overflow: ellipsis;
     width: 100%;
     height: 20px;
     font-size: 16px;
@@ -733,6 +731,7 @@ body {
     padding-left: 15px;
     width: 100%;
     gap: 20px;
+    cursor: pointer;
 }
 .primary-box:hover{
     background: #e9eef6;
